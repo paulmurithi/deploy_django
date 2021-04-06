@@ -30,6 +30,6 @@ exec $GUNICORN $DJANGO_WSGI_MODULE:application \
     --name=$NAME \
     --workers=$NUM_WORKERS \
     --user=$USER --group=$GROUP \
-    --log-level=info \
+    --log-level=debug \
     --bind=unix:$SOCKFILE \
     --forwarded-allow-ips="*"
